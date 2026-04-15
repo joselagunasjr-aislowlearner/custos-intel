@@ -25,6 +25,7 @@ async function bootstrap() {
     origin: [
       'https://joselagunasjr-aislowlearner.github.io',
       'https://custos-intel-production.up.railway.app',
+            'https://custos-intel-production-b72f.up.railway.app',
       ...(process.env.NODE_ENV !== 'production'
         ? ['http://localhost:5173', 'http://127.0.0.1:5173']
         : []),
