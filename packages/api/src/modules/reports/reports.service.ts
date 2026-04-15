@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { ProjectsService } from '../projects/projects.service';
 import { ChecklistService } from '../checklist/checklist.service';
 import { AnalysisService } from '../analysis/analysis.service';
-import PDFDocument from 'pdfkit';
+import * as PDFDocument from 'pdfkit';
 
 @Injectable()
 export class ReportsService {
