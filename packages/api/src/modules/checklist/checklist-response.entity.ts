@@ -37,14 +37,14 @@ export class ChecklistResponse {
   @Column({ type: 'text', nullable: true })
   notes!: string | null;
 
-  @Column({ name: 'finding_id', nullable: true })
+  @Column({ name: 'finding_id', type: 'uuid', nullable: true })
   findingId!: string | null;
 
   @ManyToOne(() => AnalysisFinding, { onDelete: 'SET NULL', nullable: true })
   @JoinColumn({ name: 'finding_id' })
   finding!: AnalysisFinding | null;
 
-  @Column({ name: 'reviewed_by', nullable: true })
+  @Column({ name: 'reviewed_by', type: 'uuid', nullable: true })
   reviewedBy!: string | null;
 
   @ManyToOne(() => User, { nullable: true })

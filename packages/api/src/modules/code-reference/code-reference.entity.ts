@@ -16,7 +16,7 @@ export class CodeReference {
   @Column({ name: 'code_source' })
   codeSource!: string;
 
-  @Column({ nullable: true })
+  @Column({ type: 'varchar', nullable: true })
   section!: string | null;
 
   @Column()
@@ -32,7 +32,7 @@ export class CodeReference {
   })
   numericValue!: number | null;
 
-  @Column({ nullable: true })
+  @Column({ type: 'varchar', nullable: true })
   unit!: string | null;
 
   @Column({ type: 'text', array: true, default: '{}' })

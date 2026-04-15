@@ -28,28 +28,28 @@ export class Project {
   @Column()
   name!: string;
 
-  @Column({ nullable: true })
+  @Column({ type: 'varchar', nullable: true })
   address!: string | null;
 
-  @Column({ name: 'building_type', nullable: true })
+  @Column({ name: 'building_type', type: 'varchar', nullable: true })
   buildingType!: string | null;
 
-  @Column({ name: 'construction_type', nullable: true })
+  @Column({ name: 'construction_type', type: 'varchar', nullable: true })
   constructionType!: string | null;
 
-  @Column({ name: 'occupancy_group', nullable: true })
+  @Column({ name: 'occupancy_group', type: 'varchar', nullable: true })
   occupancyGroup!: string | null;
 
-  @Column({ nullable: true })
+  @Column({ type: 'int', nullable: true })
   stories!: number | null;
 
-  @Column({ name: 'square_footage', nullable: true })
+  @Column({ name: 'square_footage', type: 'int', nullable: true })
   squareFootage!: number | null;
 
-  @Column({ name: 'sprinkler_system_type', nullable: true })
+  @Column({ name: 'sprinkler_system_type', type: 'varchar', nullable: true })
   sprinklerSystemType!: string | null;
 
-  @Column({ name: 'hazard_classification', nullable: true })
+  @Column({ name: 'hazard_classification', type: 'varchar', nullable: true })
   hazardClassification!: string | null;
 
   @Column({ default: 'in_progress' })

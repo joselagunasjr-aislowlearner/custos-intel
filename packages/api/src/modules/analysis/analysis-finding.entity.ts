@@ -23,7 +23,7 @@ export class AnalysisFinding {
   @JoinColumn({ name: 'project_id' })
   project!: Project;
 
-  @Column({ name: 'photo_id', nullable: true })
+  @Column({ name: 'photo_id', type: 'uuid', nullable: true })
   photoId!: string | null;
 
   @ManyToOne(() => PlanPhoto, { onDelete: 'SET NULL', nullable: true })
@@ -48,7 +48,7 @@ export class AnalysisFinding {
   @Column({ type: 'decimal', precision: 3, scale: 2, nullable: true })
   confidence!: number | null;
 
-  @Column({ name: 'ai_model', nullable: true })
+  @Column({ name: 'ai_model', type: 'varchar', nullable: true })
   aiModel!: string | null;
 
   @Column({ name: 'raw_ai_response', type: 'text', nullable: true })

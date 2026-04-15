@@ -19,7 +19,7 @@ export class User {
   @Column({ unique: true })
   email!: string;
 
-  @Column({ name: 'full_name', nullable: true })
+  @Column({ name: 'full_name', type: 'varchar', nullable: true })
   fullName!: string | null;
 
   @Column({ default: 'reviewer' })

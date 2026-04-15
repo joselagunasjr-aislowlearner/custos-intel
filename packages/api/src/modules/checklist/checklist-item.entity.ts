@@ -14,7 +14,7 @@ export class ChecklistItem {
   @Column({ type: 'text' })
   description!: string;
 
-  @Column({ name: 'code_reference', nullable: true })
+  @Column({ name: 'code_reference', type: 'varchar', nullable: true })
   codeReference!: string | null;
 
   @Column({ name: 'sort_order' })

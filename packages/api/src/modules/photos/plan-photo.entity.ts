@@ -25,19 +25,19 @@ export class PlanPhoto {
   @Column({ name: 'storage_path' })
   storagePath!: string;
 
-  @Column({ name: 'storage_url', nullable: true })
+  @Column({ name: 'storage_url', type: 'varchar', nullable: true })
   storageUrl!: string | null;
 
-  @Column({ name: 'original_filename', nullable: true })
+  @Column({ name: 'original_filename', type: 'varchar', nullable: true })
   originalFilename!: string | null;
 
-  @Column({ name: 'file_size_bytes', nullable: true })
+  @Column({ name: 'file_size_bytes', type: 'int', nullable: true })
   fileSizeBytes!: number | null;
 
-  @Column({ name: 'mime_type', nullable: true })
+  @Column({ name: 'mime_type', type: 'varchar', nullable: true })
   mimeType!: string | null;
 
-  @Column({ name: 'photo_type', nullable: true })
+  @Column({ name: 'photo_type', type: 'varchar', nullable: true })
   photoType!: string | null;
 
   @Column({ type: 'text', nullable: true })
